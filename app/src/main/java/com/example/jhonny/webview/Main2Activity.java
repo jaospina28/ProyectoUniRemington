@@ -14,6 +14,6 @@ public class Main2Activity extends AppCompatActivity {
         setContentView(R.layout.activity_main2);
 
         webView = (WebView)findViewById(R.id.web);
-        webView.loadUrl("http//:www.uniremingtonmanizales.edu.co");
+        webView.loadUrl("http://uniremingtonmanizales.edu.co/");
     }
 }
