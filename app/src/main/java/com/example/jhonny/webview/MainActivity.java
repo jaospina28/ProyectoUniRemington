@@ -4,8 +4,10 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
@@ -13,6 +15,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     Button button;
     EditText correo;
     EditText clave;
+    Spinner spinner;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +26,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         clave = (EditText)findViewById(R.id.clave);
         button = (Button)findViewById(R.id.btn_ingresar);
         button.setOnClickListener(this);
+        spinner = (Spinner) findViewById(R.id.eleccion);
+
+        String[] eleccion = { "Administrativos", "Docentes - Tutores", "Estudiantes" };
+
+        ArrayAdapter arrayAdapter = new ArrayAdapter(MainActivity.this, android.R.layout.simple_dropdown_item_1line, eleccion);
+        spinner.setAdapter(arrayAdapter);
     }
 
     @Override
@@ -40,7 +49,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             }
 
         }else{
-            Toast.makeText(MainActivity.this, "Error en usuario", Toast.LENGTH_SHORT).show();
+            Toast.makeText(MainActivity.this, "Error en correo", Toast.LENGTH_SHORT).show();
         }
 
 
