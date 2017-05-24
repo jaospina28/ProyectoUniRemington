@@ -5,5 +5,10 @@
     <color name="colorAccent">#e30613</color>
     <color name="botonesAzules">#00447e</color>
     <color name="textoBlanco">#ffffff</color>
-    <color name="titulos">#FF000000</color>
+    <color name="rojo">#e30613</color>
+    <color name="azul">#3F51B5</color>
+    <color name="titulos">#000000</color>
+    <color name="negro">#000000</color>
+    <color name="blanco">#ffffff</color>
+    <color name="fondo">#ffffff</color>
 </resources>
