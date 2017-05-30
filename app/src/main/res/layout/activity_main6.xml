@@ -23,30 +23,30 @@
         android:text="Textos" />
 
     <RadioGroup
-        android:id="@+id/radiocolor"
+        android:id="@+id/radiomenu"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" >
 
         <RadioButton
-            android:id="@+id/blanco"
+            android:id="@+id/estudiante"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Blanco" />
+            android:text="Estudiante" />
 
         <RadioButton
-            android:id="@+id/azul"
+            android:id="@+id/docente"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Azul" />
+            android:text="Docente - Tutor" />
 
         <RadioButton
-            android:id="@+id/rojo"
+            android:id="@+id/directivo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="rojo" />
+            android:text="Directivo" />
 
         <RadioButton
             android:id="@+id/negro"

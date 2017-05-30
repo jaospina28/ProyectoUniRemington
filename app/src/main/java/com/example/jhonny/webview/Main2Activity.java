@@ -15,6 +15,7 @@ public class Main2Activity extends AppCompatActivity implements View.OnClickList
     Button q10;
     Button moodle;
     Button recibo;
+    Button biblioteca;
     ImageView config;
 
     @Override
@@ -30,6 +31,8 @@ public class Main2Activity extends AppCompatActivity implements View.OnClickList
         moodle.setOnClickListener(this);
         recibo = (Button) findViewById(R.id.btn_recibo);
         recibo.setOnClickListener(this);
+        biblioteca = (Button) findViewById(R.id.btnbiblioteca);
+        biblioteca.setOnClickListener(this);
         config = (ImageView) findViewById(R.id.img_config);
         config.setOnClickListener(this);
 
@@ -55,6 +58,11 @@ public class Main2Activity extends AppCompatActivity implements View.OnClickList
         }else if(v.getId() == R.id.btn_recibo){
             Intent cambioActi3 = new Intent(this, Main3Activity.class);
             String link = "http://www.uniremingtonmanizales.edu.co/liquidacion/inicio.php";
+            cambioActi3.putExtra("link",link);
+            startActivity(cambioActi3);
+        }else if(v.getId() == R.id.btnbiblioteca){
+            Intent cambioActi3 = new Intent(this, Main3Activity.class);
+            String link = "http://biblioteca.uniremington.edu.co/index.php/login";
             cambioActi3.putExtra("link",link);
             startActivity(cambioActi3);
         }
