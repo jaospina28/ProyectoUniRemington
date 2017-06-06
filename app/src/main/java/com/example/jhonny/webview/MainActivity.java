@@ -7,9 +7,11 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.AdapterView;
 import android.widget.Button;
+import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
+import android.widget.ToggleButton;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
@@ -17,12 +19,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     EditText correo;
     EditText clave;
     Spinner spinner;
+    ToggleButton toggleButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        toggleButton = (ToggleButton)findViewById(R.id.toggle);
         correo = (EditText)findViewById(R.id.correo);
         clave = (EditText)findViewById(R.id.clave);
         button = (Button)findViewById(R.id.btn_ingresar);
@@ -33,6 +36,31 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         ArrayAdapter arrayAdapter = new ArrayAdapter(MainActivity.this, android.R.layout.simple_dropdown_item_1line, eleccion);
         spinner.setAdapter(arrayAdapter);
+
+        toggleButton.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if(isChecked){
+                    String cor;
+                    String cla;
+                    if(String.valueOf(spinner.getSelectedItem()).equals("Estudiantes")){
+                        cor = "estudiante@uniremingtonmanizales.edu.co";
+                        cla = "123456";
+                        Toast.makeText(MainActivity.this, "Correo: " + cor + " Clave: " + cla, Toast.LENGTH_LONG).show();
+                    }else if(String.valueOf(spinner.getSelectedItem()).equals("Docentes - Tutores")){
+                        cor = "docente@uniremingtonmanizales.edu.co";
+                        cla = "123456";
+                        Toast.makeText(MainActivity.this, "Correo: " + cor + " Clave: " + cla, Toast.LENGTH_LONG).show();
+                    }else if(String.valueOf(spinner.getSelectedItem()).equals("Administrativos")){
+                        cor = "administrativo@uniremingtonmanizales.edu.co";
+                        cla = "123456";
+                        Toast.makeText(MainActivity.this, "Correo: " + cor + " Clave: " + cla, Toast.LENGTH_LONG).show();
+                    }
+                }else{
+                    //Toast.makeText(MainActivity.this, "No oprimido", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
 
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override

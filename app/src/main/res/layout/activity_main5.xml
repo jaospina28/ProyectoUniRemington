@@ -23,13 +23,26 @@
                 android:textAlignment="center"
                 android:textColor="@color/titulos" />
 
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="135dp"
+                android:layout_marginTop="20dp"
+                android:adjustViewBounds="false"
+                android:src="@mipmap/logo"
+                android:tag="0"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.087" />
+
             <Button
                 android:id="@+id/btn_q10"
                 android:background="@color/botonesAzules"
                 android:textColor="@color/textoBlanco"
                 android:layout_width="match_parent"
                 android:layout_height="52dp"
-                android:layout_marginTop="50dp"
+                android:layout_marginTop="30dp"
                 android:layout_marginBottom="5dp"
                 android:text="Q10 NOTAS"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -78,6 +91,48 @@
                 android:layout_height="52dp"
                 android:layout_marginBottom="5dp"
                 android:text="Reserva de Equipos"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintHorizontal_bias="0.504"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.766"
+                tools:layout_editor_absoluteY="356dp" />
+
+            <TextView
+                android:id="@+id/txtsedes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sedes Manizales"
+                android:textAlignment="center"
+                android:layout_marginTop="30dp"
+                android:textColor="@color/titulos"/>
+
+            <RadioGroup
+                android:id="@+id/radgsedes"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <RadioButton
+                    android:id="@+id/radiocentro"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sede Centro" />
+
+                <RadioButton
+                    android:id="@+id/radiocable"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sede Cable" />
+            </RadioGroup>
+
+            <Button
+                android:id="@+id/btnversede"
+                android:background="@color/botonesAzules"
+                android:textColor="@color/textoBlanco"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginBottom="5dp"
+                android:text="Ver Sede"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintHorizontal_bias="0.504"
                 app:layout_constraintLeft_toLeftOf="parent"
